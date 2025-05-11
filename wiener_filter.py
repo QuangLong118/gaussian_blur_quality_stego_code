@@ -23,7 +23,7 @@ def wiener_deblur_image(input_path, output_path, ksize=3, sigma=0, K=0.01):
 
     deblur = np.clip(deblur * 255, 0, 255).astype(np.uint8)
     cv2.imwrite(output_path, deblur)
-    print(f"[+] Đã khử mờ bằng Wiener Filter: '{output_path}'")
+    print(f"De-blurred with Wiener Filter: '{output_path}'")
 
 try:
     blur_path = sys.argv[1]
